@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot en JavaScript</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <title>Liste des Candidats</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
-<div class="chatbot">
-    <header>
-        <h2>Chatbot</h2>
-    </header>
-    <ul class="chatbox">
-        <li class="chat incoming">
-            <span class="material-symbols-outlined">smart_toy</span>
-            <p>Bonjour 😊 <br>Comment puis-je vous aider ?</p>
-        </li>
-    </ul>
-    <div class="chat-input">
-        <textarea id="user-input" placeholder="Entrez un message..."></textarea>
-        <span id="send-btn" class="material-symbols-outlined">send</span>
+    <h1>Liste des Candidats</h1>
+    <div class="candidats">
+        <div class="candidat" onclick="afficherPortfolio('Ali', 'Détails du portfolio de Ali')">
+            <img src="https://via.placeholder.com/150" alt="Ali">
+            <p>Ali</p>
+        </div>
+        <div class="candidat" onclick="afficherPortfolio('Sara', 'Détails du portfolio de Sara')">
+            <img src="https://via.placeholder.com/150" alt="Sara">
+            <p>Sara</p>
+        </div>
+        <div class="candidat" onclick="afficherPortfolio('Mehdi', 'Détails du portfolio de Mehdi')">
+            <img src="https://via.placeholder.com/150" alt="Mehdi">
+            <p>Mehdi</p>
+        </div>
     </div>
-</div>
-
-<script src="script.js"></script>
-
+    <div id="portfolio" class="portfolio">
+        <h2 id="nom"></h2>
+        <p id="details"></p>
+        <button onclick="cacherPortfolio()">Retour</button>
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>
